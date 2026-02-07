@@ -1,0 +1,39 @@
+#pragma once
+
+#define VIAL_KEYBOARD_UID {0x3B, 0x6B, 0xA0, 0x29, 0x80, 0x56, 0xED, 0xD1, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08}
+#define VIAL_UNLOCK_COMBO_ROWS {0, 0}
+#define VIAL_UNLOCK_COMBO_COLS {0, 1}
+
+#define MASTER_LEFT
+
+/* RGB Matrix Configuration - Per-Key Patterns */
+#undef RGB_DI_PIN
+#define RGB_DI_PIN GP10 
+#undef DRIVER_LED_TOTAL
+#define DRIVER_LED_TOTAL 46
+#undef RGB_MATRIX_MAXIMUM_BRIGHTNESS
+#define RGB_MATRIX_MAXIMUM_BRIGHTNESS 150
+
+#ifdef RGB_MATRIX_ENABLE
+    #define RGB_MATRIX_KEYPRESSES
+    #define RGB_MATRIX_FRAMEBUFFER_EFFECTS
+    #define RGB_MATRIX_EFFECT_SPLASH
+    #define RGB_MATRIX_EFFECT_SOLID_REACTIVE_WIDE
+    #define RGB_MATRIX_EFFECT_RAINBOW_MOVING_CHEVRON
+#endif
+
+/* Encoder Setup - 2 on the RIGHT Side Only */
+#undef NUM_ENCODERS
+#define NUM_ENCODERS 2
+
+#undef ENCODER_A_PINS
+#undef ENCODER_B_PINS
+#define ENCODER_A_PINS { }
+#define ENCODER_B_PINS { }
+
+#undef ENCODER_A_PINS_RIGHT
+#undef ENCODER_B_PINS_RIGHT
+#define ENCODER_A_PINS_RIGHT { GP24, GP6 }
+#define ENCODER_B_PINS_RIGHT { GP7, GP7 }
+
+#define ENCODER_RESOLUTION 4
