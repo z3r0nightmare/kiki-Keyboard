@@ -1,0 +1,20 @@
+# Kiki v1: Ordering & Assembly 🔌
+
+The Kiki v1 is designed for easy assembly using **NextPCB**. The processor and tiny components are integrated directly onto the board, so you don't need to solder the "brains" of the keyboard yourself.
+
+## How to Order
+To get the best results, follow these steps on the NextPCB website:
+
+1. **Upload Gerbers**: Upload the `Gerber.zip` file found in the `/Hardware` folder.
+2. **PCBA Service**: Select the "PCB Assembly" option.
+3. **Upload Assembly Files**: 
+   - Use `BOM.csv` (Bill of Materials) so they know which parts to use.
+   - Use `CPL.csv` (Component Placement List) so they know where to put them.
+4. **Result**: You will receive a board that already has the RP2040 chip, diodes, and resistors pre-installed.
+
+## Final Assembly (Your Part)
+Once the boards arrive, you only need to solder the larger "human-sized" parts:
+* **Switch Sockets**: For hot-swapping your switches.
+* **Rotary Encoders**: Two on each side.
+* **OLED Screens**: For the Bongo Cat animations.
+* **TRRS Jacks**: To connect the two halves using a standard TRRS cable.
